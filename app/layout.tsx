@@ -14,8 +14,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Design Tools",
-  description: "A list of all simple design tools",
+  title: "The Worxshop - A Design Tools Collection",
+  description: "A Design Tools Collection",
 };
 
 export default function RootLayout({

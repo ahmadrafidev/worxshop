@@ -16,8 +16,8 @@ export default function Home() {
       <div className="max-w-3xl mx-auto">
         <main>
           <div className="text-center mb-8">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-2">Design Tools Collection</h2>
-            <p className="text-gray-600">A curated collection of essential tools to enhance your design and development workflow</p>
+            <h2 className="text-4xl font-semibold text-gray-900 mb-2 tracking-tighter">The Worxshop - A Design Tools Collection</h2>
+            <p className="text-gray-600 text-lg">A collection of essential tools to enhance your design and development workflow</p>
           </div>
           <div className="space-y-8">
             {sideProjects.map((project, index) => (
@@ -43,7 +43,9 @@ export default function Home() {
             ))}
           </div>
         </main>
-        <Footer />
+        <div className="flex items-center justify-center">
+          <Footer />
+        </div>
       </div>
     </div>
   );
