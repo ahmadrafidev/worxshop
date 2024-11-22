@@ -9,6 +9,11 @@ export default function Home() {
       description: "Lumen is a fast, accessible color checks for designers and developers",
       link: "https://luumen.vercel.app/",
     },
+    {
+      title: "Atlas",
+      description: "Atlas is a quick and actionable fixes for web accessibility.",
+      link: "https://atlassy.vercel.app/",
+    },
   ];
 
   return (
