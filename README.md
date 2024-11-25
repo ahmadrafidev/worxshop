@@ -21,8 +21,10 @@ The Worxshop is your go-to resource for essential design tools, making it easy t
 
 ## Tools Included
 
-- **Contrast Checker**: Ensure your text and background colors meet accessibility standards.
+- **Lumen: Fast, accessible color checks for designers and developers**: Ensure your text and background colors meet accessibility standards. [Lumen's Website](https://luumen.vercel.app/)
+- **Atlas: Quick and actionable fixes for web accessibility**: A quick solution to resolve your website accessibility issue. [Atlas Website](https://atlassy.vercel.app/)
 
+---
 The Worxshop is more than just a collection of tools; it's a creative companion designed to simplify and enhance your design workflow. 
 
 Stay tuned for new tools and updates!
