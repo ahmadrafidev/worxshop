@@ -1,56 +1,75 @@
-import Link from 'next/link'
+import React from 'react';
+import Link from 'next/link';
 import { Footer } from '../components/Footer/Footer';
+import { ArrowUpRight, Sparkles } from 'lucide-react';
 
 export default function Home() {
-  
   const sideProjects = [
     {
       title: "Lumen",
       description: "Lumen is a fast, accessible color checks for designers and developers",
       link: "https://luumen.vercel.app/",
+      gradient: "from-violet-500 to-purple-500"
     },
     {
       title: "Atlas",
       description: "Atlas is a quick and actionable fixes for web accessibility.",
       link: "https://atlassy.vercel.app/",
+      gradient: "from-blue-500 to-cyan-500"
     },
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4 md:px-12 flex flex-col">
-      <div className="max-w-3xl mx-auto">
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+      <div className="max-w-5xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
         <main>
-          <div className="text-center mb-8">
-            <h2 className="text-4xl font-semibold text-gray-900 mb-2 tracking-tighter">The Worxshop - A Design Tools Collection</h2>
-            <p className="text-gray-600 text-lg">A collection of essential tools to enhance your design and development workflow</p>
+          <div className="text-center space-y-4 mb-16">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 text-sm font-medium text-gray-800 mb-4">
+              <Sparkles size={16} className="text-yellow-500" />
+              Design Tools Collection
+            </div>
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight">
+              The Worxshop
+            </h1>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              A collection of essential tools to enhance your design and development workflow
+            </p>
           </div>
-          <div className="space-y-8">
+
+          <div className="grid gap-8 md:grid-cols-2">
             {sideProjects.map((project, index) => (
-              <div key={index} className="bg-white shadow rounded-lg p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  <Link
-                    target="_blank"
-                    passHref
-                    href={project.link} 
-                    rel="noopener noreferrer"
-                    className="hover:underline">
-                    {project.title}
-                  </Link>
-                </h3>
-                <p className="text-gray-600 mb-4">{project.description}</p>
-                <a
-                  href={project.link}
-                  className="text-blue-700 hover:text-blue-500 font-medium"
-                >
-                  View Project →
-                </a>
-              </div>
+              <Link
+                key={index}
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative overflow-hidden rounded-2xl bg-white p-6 shadow-md transition-all duration-300 hover:shadow-xl"
+              >
+                <div className={`absolute inset-0 opacity-5 bg-gradient-to-br ${project.gradient}`} />
+                <div className="relative">
+                  <div className="flex items-center justify-between mb-4">
+                    <h3 className="text-xl font-semibold text-gray-900">
+                      {project.title}
+                    </h3>
+                    <ArrowUpRight 
+                      className="text-gray-400 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" 
+                      size={20} 
+                    />
+                  </div>
+                  <p className="text-gray-600">{project.description}</p>
+                  <div className="mt-4 inline-flex items-center text-sm font-medium text-gray-900">
+                    View Project
+                    <span className="ml-2 transition-transform duration-300 group-hover:translate-x-1">→</span>
+                  </div>
+                </div>
+              </Link>
             ))}
           </div>
         </main>
-        <div className="flex items-center justify-center">
+
+        <footer className="mt-16">
           <Footer />
-        </div>
+        </footer>
       </div>
     </div>
   );
