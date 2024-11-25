@@ -9,13 +9,13 @@ export default function Home() {
       title: "Lumen",
       description: "Lumen is a fast, accessible color checks for designers and developers",
       link: "https://luumen.vercel.app/",
-      gradient: "from-violet-500 to-purple-500"
+      gradient: "from-violet-400 to-purple-700"
     },
     {
       title: "Atlas",
       description: "Atlas is a quick and actionable fixes for web accessibility.",
       link: "https://atlassy.vercel.app/",
-      gradient: "from-blue-500 to-cyan-500"
+      gradient: "from-blue-400 to-cyan-700"
     },
   ];
 
@@ -45,7 +45,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="group relative overflow-hidden rounded-2xl bg-white p-6 shadow-md transition-all duration-300 hover:shadow-xl"
               >
-                <div className={`absolute inset-0 opacity-5 bg-gradient-to-br ${project.gradient}`} />
+                <div className={`absolute inset-0 opacity-5 bg-gradient-to-r ${project.gradient}`} />
                 <div className="relative">
                   <div className="flex items-center justify-between mb-4">
                     <h3 className="text-xl font-semibold text-gray-900">
