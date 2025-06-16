@@ -9,13 +9,25 @@ export default function Home() {
       title: "Lumen",
       description: "Lumen is a fast, accessible color checks for designers and developers",
       link: "https://luumen.vercel.app/",
-      gradient: "from-violet-400 to-purple-700"
+      gradient: "from-violet-400 to-purple-800"
     },
     {
       title: "Atlas",
       description: "Atlas is a quick and actionable fixes for web accessibility.",
       link: "https://atlassy.vercel.app/",
-      gradient: "from-blue-400 to-cyan-700"
+      gradient: "from-blue-400 to-cyan-800"
+    },
+    {
+      title: "Rim",
+      description: "Rim is a fast and intuitive radius calculations for designers and developers.",
+      link: "https://rimm.vercel.app/",
+      gradient: "from-blue-400 to-violet-800"
+    },
+    {
+      title: "Omni",
+      description: "Omni is a responsive layout testing tool that helps developers and designers create, test, and validate responsive layouts across different device sizes.",
+      link: "https://omnni.vercel.app/",
+      gradient: "from-zinc-400 to-violet-800"
     },
   ];
 
