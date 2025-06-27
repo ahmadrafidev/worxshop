@@ -8,33 +8,51 @@ export default function Home() {
       title: "Lumen",
       description: "Fast, accessible color checks for designers and developers",
       link: "https://luumen.vercel.app/",
-      gradient: "from-cyan-50 to-blue-50"
+      gradient: "from-cyan-50 to-blue-50",
+      status: "Live"
     },
     {
       title: "Atlas",
       description: "Quick and actionable fixes for web accessibility",
       link: "https://atlassy.vercel.app/",
-      gradient: "from-blue-50 to-sky-50"
+      gradient: "from-blue-50 to-sky-50",
+      status: "Coming Soon"
     },
     {
       title: "Rim",
       description: "Fast and intuitive radius calculations for designers and developers",
       link: "https://rimm.vercel.app/",
-      gradient: "from-sky-50 to-cyan-50"
+      gradient: "from-sky-50 to-cyan-50",
+      status: "Live"
     },
     {
       title: "Omni",
       description: "Responsive layout testing tool for developers and designers",
       link: "https://omnni.vercel.app/",
-      gradient: "from-blue-50 to-cyan-50"
+      gradient: "from-blue-50 to-cyan-50",
+      status: "In Progress"
     },
     {
       title: "Boop",
       description: "Visual playground for UI components",
       link: "https://booopy.vercel.app/",
-      gradient: "from-cyan-50 to-sky-50"
+      gradient: "from-cyan-50 to-sky-50",
+      status: "Live"
     },
   ];
+
+  const getStatusStyles = (status: string) => {
+    switch (status) {
+      case "Live":
+        return "bg-green-100/80 text-green-700 border-green-200/50";
+      case "In Progress":
+        return "bg-yellow-100/80 text-yellow-700 border-yellow-200/50";
+      case "Coming Soon":
+        return "bg-gray-100/80 text-gray-700 border-gray-200/50";
+      default:
+        return "bg-gray-100/80 text-gray-700 border-gray-200/50";
+    }
+  };
 
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-sky-50 via-cyan-50/50 to-blue-100/70 overflow-hidden">
@@ -134,9 +152,14 @@ export default function Home() {
               <div className={`absolute inset-0 opacity-40 bg-gradient-to-br ${project.gradient}`} />
               <div className="relative">
                 <div className="flex items-start justify-between mb-4">
-                  <h3 className="text-xl font-medium text-gray-900">
-                    {project.title}
-                  </h3>
+                  <div className="flex items-center gap-3">
+                    <h3 className="text-xl font-medium text-gray-900">
+                      {project.title}
+                    </h3>
+                    <span className={`px-2 py-1 text-xs font-medium rounded-full border backdrop-blur-sm ${getStatusStyles(project.status)}`}>
+                      {project.status}
+                    </span>
+                  </div>
                   <ArrowUpRight 
                     className="text-gray-400 transition-all duration-200 group-hover:text-cyan-600 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" 
                     size={18} 
