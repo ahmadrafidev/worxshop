@@ -2,14 +2,21 @@ import Link from "next/link"
 
 export function Footer() {
   return (
-    <footer className="py-6 fixed bottom-0 flex justify-center items-center">
-      <p className="text-xs md:text-sm font-medium text-gray-700 dark:text-gray-300">
-        Built by{" "}
-        <Link href="https://x.com/rafiwiranaa" passHref className="underline" aria-label="Visit Rafi's Twitter">
-          Rafi
-        </Link>
-        .
-      </p>
+    <footer className="border-t border-gray-100 py-8">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p className="text-center text-sm text-gray-500">
+          Built by{" "}
+          <Link 
+            href="https://x.com/rafiwiranaa" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-700 hover:text-gray-900 transition-colors duration-200 underline underline-offset-4" 
+            aria-label="Visit Rafi's Twitter"
+          >
+            Rafi
+          </Link>
+        </p>
+      </div>
     </footer>
   )
 }
