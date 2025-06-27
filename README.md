@@ -36,7 +36,3 @@ Whether you're checking color accessibility, calculating border radius, testing 
 | **📐 Rim** | Fast and intuitive radius calculations for designers and developers. Perfect border-radius values at your fingertips. | ✅ Live | [rimm.vercel.app](https://rimm.vercel.app/) | [GitHub](https://github.com/ahmadrafidev/rim) |
 | **📱 Omni** | Responsive layout testing tool for developers and designers. Test your designs across multiple screen sizes instantly. | ✅ Live | [omnni.vercel.app](https://omnni.vercel.app/) | [GitHub](https://github.com/ahmadrafidev/omni) |
 | **🎮 Boop** | Visual playground for UI components. Experiment with components and see them come to life in real-time. | ✅ Live | [booopy.vercel.app](https://booopy.vercel.app/) | [GitHub](https://github.com/ahmadrafidev/boop) |
-
----
-
-Built by [Rafi](https://x.com/rafiwiranaa)
